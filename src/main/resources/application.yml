@@ -1,0 +1,17 @@
+server:
+  port: 8080
+  tomcat:
+    uri-encoding: utf-8
+
+
+
+logging:
+  level:
+    com: info
+  config: classpath:Logback.xml
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://www.miss-rabbit.cc:3306/wxincome?useUnicode=true&characterEncoding=utf-8&useSSL=true&zeroDateTimeBehavior=convertToNull
+    username: wxuser
+    password: asd87060

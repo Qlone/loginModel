@@ -18,4 +18,11 @@
         )
     </insert>
 
+    <select id="queryUserAccount" parameterType="com.qlone.login.dubbo.dto.UserDataDTO" resultType="com.qlone.login.dubbo.dto.UserDataDTO">
+        SELECT id
+        FROM user_data
+        WHERE account = #{account}
+        LIMIT 0,1;
+    </select>
+
 </mapper>

@@ -10,13 +10,14 @@ import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.data.redis.core.ValueOperations;
 import org.springframework.stereotype.Component;
 
+import java.io.Serializable;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
 import java.util.concurrent.TimeUnit;
 
 @Component
-public class RedisClient {
+public class RedisClient{
     @Autowired
     private RedisTemplate redisTemplate;
     @Value("${login.redis.timeout}")

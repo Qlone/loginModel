@@ -29,6 +29,7 @@ public class TokenUtil {
             String[] value = res.split("-");
             return value.length>1 ? value[0] : null;
         } catch (Exception e) {
+            logger.error("getValue",e);
             return null;
         }
     }

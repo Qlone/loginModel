@@ -17,12 +17,23 @@
           #{mail}
         )
     </insert>
-
+    <!--查询用户账号是否存在-->
     <select id="queryUserAccount" parameterType="com.qlone.login.dubbo.dto.UserDataDTO" resultType="com.qlone.login.dubbo.dto.UserDataDTO">
         SELECT id
         FROM user_data
         WHERE account = #{account}
         LIMIT 0,1;
+    </select>
+    <!--检测账号登陆-->
+    <select id="checkAccountAndPsw" parameterType="com.qlone.login.dubbo.dto.UserDataDTO" resultType="com.qlone.login.dubbo.dto.UserDataDTO">
+        SELECT id,
+               mail,
+               flag
+
+        FROM user_data
+        WHERE account = #{account}
+        AND password = #{password}
+        LIMIT 0,1
     </select>
 
 </mapper>

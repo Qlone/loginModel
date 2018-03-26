@@ -16,4 +16,12 @@ public interface UserDataMapper {
      * @throws Exception
      */
     UserDataDTO queryUserAccount(UserDataDTO userDataDTO) throws Exception;
+
+    /**
+     * 用于账号登陆函数
+     * @param userDataDTO 包含account 和 psw
+     * @return 返回账号信息
+     * @throws Exception
+     */
+    UserDataDTO checkAccountAndPsw(UserDataDTO userDataDTO) throws Exception;
 }
